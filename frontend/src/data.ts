@@ -10,7 +10,8 @@ export const foods: Food[] = [
     description: "Alface lisa",
     image:"assets/img/alface-lisa.jpg",
     category: ["Verdura"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 50,
   },
   {
     id: "2",
@@ -19,7 +20,8 @@ export const foods: Food[] = [
     description: "Cebolinha",
     image:"assets/img/cebolinha.jpg",
     category: ["Tempero"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 102,
   },
   {
     id: "3",
@@ -28,7 +30,8 @@ export const foods: Food[] = [
     description: "Alface lisa",
     image:"assets/img/alface-crespa.jpg",
     category: ["Verdura"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 50,
   },
   {
     id: "4",
@@ -37,7 +40,8 @@ export const foods: Food[] = [
     description: "Salsinha",
     image:"assets/img/salsinha.jpg",
     category: ["Tempero"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 102,
   },
   {
     id: "5",
@@ -46,7 +50,8 @@ export const foods: Food[] = [
     description: "Batata, R$ 7,00 o kg",
     image:"assets/img/batata.jpg",
     category: ["Verdura"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 50,
   },
   {
     id: "6",
@@ -55,7 +60,8 @@ export const foods: Food[] = [
     description: "Cenoura, R$ 6,50 o Kg",
     image:"assets/img/cenoura.jpg",
     category: ["Verdura"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 102,
   },
   {
     id: "7",
@@ -64,7 +70,8 @@ export const foods: Food[] = [
     description: "Laranja suculenta, R$ 5,00 o Kg",
     image:"assets/img/laranja.jpg",
     category: ["Fruta"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 60,
   },
   {
     id: "8",
@@ -73,7 +80,8 @@ export const foods: Food[] = [
     description: "Limão galego, R$ 5,00 o Kg",
     image:"assets/img/limao.jpg",
     category: ["Fruta"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 110,
   },
   {
     id: "9",
@@ -82,7 +90,8 @@ export const foods: Food[] = [
     description: "Banana madura, boa para fritura",
     image:"assets/img/banana.jpg",
     category: ["Fruta"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 40,
   },
   {
     id: "10",
@@ -91,7 +100,8 @@ export const foods: Food[] = [
     description: "Maçã, R$ 10,00 o Kg",
     image:"assets/img/maca.jpg",
     category: ["Fruta"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 80,
   },
   {
     id: "11",
@@ -100,7 +110,8 @@ export const foods: Food[] = [
     description: "Pera doce, e suculenta, R$ 10,00 o Kg",
     image:"assets/img/pera.jpg",
     category: ["Fruta"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 35,
   },
   {
     id: "12",
@@ -109,7 +120,8 @@ export const foods: Food[] = [
     description: " Amora, R$ 10,00 o Kg",
     image:"assets/img/amora.jpg",
     category: ["Fruta"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 95,
   },
   {
     id: "13",
@@ -118,7 +130,8 @@ export const foods: Food[] = [
     description: "Biscoito-casadinho, feito com leite e goiabada, R$ 23,62 o Kg",
     image:"assets/img/biscoito-casadinho.jpg",
     category: ["Biscoito", 'Doce'],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 120,
   },
   {
     id: "14",
@@ -127,7 +140,8 @@ export const foods: Food[] = [
     description: "Biscoito de polvilho, feito com polvilho azedo",
     image:"assets/img/biscoito-de-polvilho.jpg",
     category: ["Biscoito"],
-    restaurant: "Vale da Prata"
+    restaurant: "Vale da Prata",
+    quantity: 120,
   },
   {
     id: "15",
@@ -136,7 +150,8 @@ export const foods: Food[] = [
     description: "Queijo canastra, 1kg",
     image:"assets/img/queijo-minas.jpg",
     category: ['Queijo', 'Laticínio'],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 120,
   },
   {
     id: "16",
@@ -145,7 +160,8 @@ export const foods: Food[] = [
     description: "Doce feito de goiaba",
     image:"assets/img/goiabada.jpg",
     category: ["Doce"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 120,
   },
   {
     id: "17",
@@ -154,7 +170,8 @@ export const foods: Food[] = [
     description: "A very tasty pizza",
     image:"assets/img/doce-de-leite.jpg",
     category: ["Doce"],
-    restaurant: "Doces da vovó"
+    restaurant: "Doces da vovó",
+    quantity: 120,
   },
   {
     id: "18",
@@ -163,7 +180,8 @@ export const foods: Food[] = [
     description: "Tempero feito de orégano, bom para temperar pizzas",
     image:"assets/img/oregano.jpg",
     category: ["Tempero"],
-    restaurant: "Fazenda do retiro"
+    restaurant: "Fazenda do retiro",
+    quantity: 120,
   },
   {
     id: "19",
@@ -172,7 +190,8 @@ export const foods: Food[] = [
     description: "Tempero feito de açafrão, usado para dar cor e sabor a comida",
     image:"assets/img/acafrao-em-po.jpg",
     category: ["Tempero"],
-    restaurant: "Jatobá organicos"
+    restaurant: "Jatobá organicos",
+    quantity: 120,
   },
   {
     id: "20",
@@ -181,7 +200,8 @@ export const foods: Food[] = [
     description: "Mel da melhor qualidade, extraido na região de Minas Gerais",
     image:"assets/img/mel.jpg",
     category: ["Doce"],
-    restaurant: "Ceasa"
+    restaurant: "Ceasa",
+    quantity: 120,
   }
 ];
 

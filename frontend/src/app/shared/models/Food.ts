@@ -6,4 +6,5 @@ export class Food{
   image!: string;
   category!: string[];
   restaurant!: string;
+  quantity!: number;
 }
