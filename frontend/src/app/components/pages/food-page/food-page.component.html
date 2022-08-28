@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <img [src]="food.image" [alt]="food.name" />
+    <div class="details">
+      <div class="header">
+        <span class="name">
+          {{food.name}}
+        </span>
+      </div>
+      <div class="description">
+        {{food.description}}
+      </div>
+      <div class="tags">
+        <a *ngFor="let tag of food.category" routerLink="/tag/{{tag}}">
+          {{tag}}
+        </a>
+      </div>
+      <div class="price">
+        <span>
+          {{food.price | currency}}
+        </span>
+      </div>
+      <button>Adicionar ao Carrinho</button>
+    </div>
+  </div>
+</body>
+
+</html>

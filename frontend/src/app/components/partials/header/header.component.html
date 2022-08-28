@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a routerLink="/" class="logo">Mercadinho</a>
+      <nav>
+        <ul>
+          <app-search class="search"></app-search>
+          <li>
+            <a routerLink="/login">Login</a>
+          </li>
+          <li class="menu-container">
+            <a routerLink="/dashboard">Lorenzo</a>
+            <div class="menu">
+              <a routerLink="/profile">Profile</a>
+              <a routerLink="/orders">Orders</a>
+              <a>Logout</a>
+            </div>
+          </li>
+          <li>
+            <a routerLink="/cart-page">
+              Cart <span>3</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+</html>
