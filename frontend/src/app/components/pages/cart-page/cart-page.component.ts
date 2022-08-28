@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { Cart } from 'src/app/shared/models/Cart';
 import { CartItem } from 'src/app/shared/models/CartItem';
@@ -30,6 +30,10 @@ export class CartPageComponent implements OnInit {
 
   incrementQuantity(cartItem:CartItem){
     this.cartService.incrementQuantity(cartItem.food.id);
+  }
+
+  getActiveAdd(cartItem:CartItem){
+    return cartItem.quantity == cartItem.food.quantity;
   }
 
   decreaseQuantity(cartItem:CartItem){

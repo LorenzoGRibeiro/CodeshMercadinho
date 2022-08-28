@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { foods } from 'src/data';
 import { Cart } from '../shared/models/Cart';
@@ -11,7 +12,8 @@ import { Food } from '../shared/models/Food';
 export class CartService {
   private cart: Cart = this.getCartFromLocalStorage();
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
-  constructor() {}
+
+  constructor(private toastr: ToastrService) {}
 
   addToCart(food: Food): void {
     let cartItem = this.cart.items
@@ -40,10 +42,12 @@ export class CartService {
   incrementQuantity(foodId: string){
     let cartItem = this.cart.items
     .find(item => item.food.id === foodId);
+    let storageItem = foods.find(item => item.id === foodId);
     if (!cartItem)
     return;
-
-
+    if(cartItem.quantity == storageItem?.quantity){
+      return;
+    }
     cartItem.quantity++;
     cartItem.price = cartItem.quantity * cartItem.food.price;
     this.setCartToLocalStorage();
@@ -54,8 +58,7 @@ export class CartService {
     .find(item => item.food.id === foodId);
     if (!cartItem) return;
     if(!cartItem.quantity ){
-      this.removeFromCart(foodId);
-      return;
+      return this.removeFromCart(foodId);
     }
 
     cartItem.quantity--;

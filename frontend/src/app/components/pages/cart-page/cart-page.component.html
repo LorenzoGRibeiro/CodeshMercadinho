@@ -24,7 +24,7 @@
         <div class="quantity">
           <button (click)="decreaseQuantity(cartItem)">-</button>
           <input type="text" [value]="cartItem.quantity">
-          <button (click)="incrementQuantity(cartItem)">+</button>
+          <button (click)="incrementQuantity(cartItem)" [disabled]="getActiveAdd(cartItem)">+</button>
         </div>
         <div>
           {{ cartItem.food.price | currency: 'BRL': 'symbol': '1.2-2' }}

@@ -10,6 +10,7 @@ import { TagsComponent } from './components/partials/tags/tags.component';
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partials/title/title.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -25,19 +26,10 @@ import { TitleComponent } from './components/partials/title/title.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    SearchComponent,
-    TagsComponent,
-    FoodPageComponent,
-    CartPageComponent,
-    TitleComponent,
-    NgbModule
-  ]
-
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
