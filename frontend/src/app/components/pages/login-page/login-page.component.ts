@@ -10,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginPageComponent implements OnInit {
 
-  LoginSession!: FormGroup;
+  loginForm!: FormGroup;
   isSubmitted = false;
   returnUrl = '';
   constructor(private formBuilder:FormBuilder,
@@ -19,7 +19,7 @@ export class LoginPageComponent implements OnInit {
     private router:Router) { }
 
   ngOnInit(): void {
-    this.LoginSession = this.formBuilder.group({
+    this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     })
@@ -28,12 +28,12 @@ export class LoginPageComponent implements OnInit {
   }
 
   get formControls() {
-    return this.LoginSession.controls;
+    return this.loginForm.controls;
   }
 
   login() {
     this.isSubmitted = true;
-    if(this.LoginSession.invalid) return;
+    if(this.loginForm.invalid) return;
 
     this.userService.login({email:this.formControls.email.value,
        password:this.formControls.password.value}).subscribe(()=>{

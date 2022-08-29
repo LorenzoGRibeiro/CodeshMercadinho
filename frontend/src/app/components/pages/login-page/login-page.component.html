@@ -13,11 +13,13 @@
     <div class="details">
       <app-title title="Login"></app-title>
 
-      <form [formGroup]="LoginSession" (ngSubmit)="login()">
-        <text-input [control]="formControls.email" [showErrorsWhen]="isSubmitted" type="email" label="Email">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <text-input [control]="formControls.email"
+        [showErrorsWhen]="isSubmitted" type="email" label="Email">
         </text-input>
 
-        <text-input [control]="formControls.password" [showErrorsWhen]="isSubmitted" type="password" label="Password">
+        <text-input [control]="formControls.password"
+        [showErrorsWhen]="isSubmitted" type="password" label="Password">
         </text-input>
 
         <default-button text="Login">
