@@ -15,22 +15,19 @@
 
       <form [formGroup]="LoginSession" (ngSubmit)="login()">
         <text-input
-        [control]="formControl.email"
+        [control]="formControls.email"
         [showErrorsWhen]="isSubmitted"
         type="email"
         label="Email"></text-input>
 
-        <div class="form-group">
-          <label>Password</label>
-          <div>
-            <input type="password" placeholder="password" formControlName="password">
-          </div>
-        </div>
-        <div class="erro-list" *ngIf="formControls.password.errors && isSubmitted">
-          <div *ngIf="formControls.password.errors.required">Senha não pode estar em branco</div>
-        </div>
+        <text-input
+        [control]="formControls.password"
+        [showErrorsWhen]="isSubmitted"
+        type="password"
+        label="Password"></text-input>
         <div class="button">
-          <button type="submit">Login</button>
+
+        <button type="submit">Login</button>
         </div>
       </form>
     </div>
