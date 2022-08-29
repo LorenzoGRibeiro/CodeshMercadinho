@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   addToCart(){
     this.cartService.addToCart(this.foods[0]);
     this.router.navigateByUrl('/cart-page');

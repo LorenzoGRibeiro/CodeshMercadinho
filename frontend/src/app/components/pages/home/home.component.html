@@ -7,6 +7,9 @@
 </head>
 <body>
   <app-tags></app-tags>
+  <app-not-found
+  [visible]="!foods || !foods.length"
+  resetLinkText="Reset Search"></app-not-found>
   <ul>
     <li *ngFor="let food of foods">
       <a routerLink="/food/{{food.id}}">
@@ -26,7 +29,7 @@
             Fonecedor: {{food.restaurant}}
           </div>
           <div class="price">
-            <span class="price">{{food.price | currency}}</span>
+            <span class="price">{{food.price | currency: 'BRL'}}</span>
           </div>
         </div>
       </a>
