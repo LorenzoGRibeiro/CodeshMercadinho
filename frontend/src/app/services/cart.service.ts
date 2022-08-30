@@ -75,6 +75,10 @@ export class CartService {
     return this.cartSubject.asObservable();
   }
 
+  getCart():Cart{
+    return this.cartSubject.value;
+  }
+
   private setCartToLocalStorage():void{
     //adiciona o carrinho no local storage
     this.cart.totalPrice = this.cart.items

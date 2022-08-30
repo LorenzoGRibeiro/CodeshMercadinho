@@ -18,6 +18,10 @@ export class UserService {
     this.userObservable = this.userSubjact.asObservable();
   }
 
+public get currentUser(): User {
+    return this.userSubjact.value;
+}
+
 login(userLogin:IUserLogin):Observable<User> {
     return this.http.post<User>(USER_LOGIN_URL, userLogin).pipe(
       tap({

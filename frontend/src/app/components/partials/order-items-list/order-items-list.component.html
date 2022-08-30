@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="5">
+        <h3>Order Items:</h3>
+      </td>
+    </tr>
+    <tr *ngFor="let item of order.items">
+      <td>
+        <a routerLink="/food/{{item.food.id}}">
+          <img [src]="item.food.image" alt="{{item.food.name}}" >
+        </a>
+      </td>
+      <td>
+        {{item.food.name}}
+      </td>
+      <td>
+        {{item.quantity}}
+      </td>
+      <td>
+        {{item.food.price | currency : 'BRL' : 'symbol' : '1.2-2'}}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"></td>
+      <td><h3>Total:</h3></td>
+      <td><strong>{{order.totalPrice | currency : 'BRL'}}</strong></td>
+
+
+    </tr>
+  </table>
+
+</body>
+</html>

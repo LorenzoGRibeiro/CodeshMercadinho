@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <app-title title="Order Form" fontSize="1.6rem"></app-title>
+      <form [formGroup]="checkoutForm">
+        <text-input [control]="fc.name" label="Name"></text-input>
+        <text-input [control]="fc.address" label="Address"></text-input>
+      </form>
+      <items-list [order]="order"></items-list>
+      <div class="buttons-container">
+        <div class="buttons">
+          <button (click)="creatOrder()" >Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
